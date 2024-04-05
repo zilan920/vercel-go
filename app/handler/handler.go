@@ -1,9 +1,10 @@
 package handler
 
 import (
-	"net/http"
-
+	"fmt"
 	"github.com/gin-gonic/gin"
+	"golang-vercel/app"
+	"net/http"
 )
 
 func Ping(c *gin.Context) {
@@ -23,4 +24,13 @@ func Ping(c *gin.Context) {
 // @Router      /hello/:name [GET]
 func Hello(c *gin.Context) {
 	c.String(http.StatusOK, "Hello %v", c.Param("name"))
+}
+
+func Telegram(c *gin.Context) {
+	client, err := app.NewTelegramClient(c)
+	if err != nil {
+		fmt.Println("init client error", err)
+		return
+	}
+	client.HandleUpdate()
 }
