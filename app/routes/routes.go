@@ -15,7 +15,7 @@ func Register(app *gin.Engine) {
 
 	app.GET("/ping", handler.Ping)
 	app.POST("/telegram-webhook", handler.Telegram)
-	app.GET("/telegram-webhook", handler.Telegram)
+	app.GET("/telegram-webhook", handler.Ping)
 }
 
 func ErrRouter(c *gin.Context) {
