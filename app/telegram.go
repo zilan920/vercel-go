@@ -8,9 +8,9 @@ import (
 	"log"
 )
 
-// https://api.telegram.org/6847302523:AAGH73xiPrQhKaP5n76IItYpYGG0v_0Dffo/setWebhook?url=https://gogogogogogo.vercel.app/telegram-webhook
+// https://api.telegram.org/bot6847302523:AAGH73xiPrQhKaP5n76IItYpYGG0v_0Dffo/setWebhook?url=https://gogogogogogo.vercel.app/telegram-webhook
 
-var accessToken = "6847302523:AAGH73xiPrQhKaP5n76IItYpYGG0v_0DffoY"
+var accessToken = "6847302523:AAGH73xiPrQhKaP5n76IItYpYGG0v_0Dffo"
 var channelName = "test_usdv111111"
 
 var commandCheckUserJoined = "check_user_joined"
